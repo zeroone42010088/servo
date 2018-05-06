@@ -1100,7 +1100,7 @@ body {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000000; /*   было #000 \9  */
+  background-color: #000000; 
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
   border-radius: 10px;
@@ -1166,7 +1166,7 @@ body {
   height: 100%;
   padding: 0 5%;  /*  padding:;  */
   font-size: 18px;
-  text-indent: 5%; /* Отступ первой строки в пикселах */
+  text-indent: 5%; 
 }
 .title-page {
   height: 150px;
@@ -1297,7 +1297,7 @@ body {
 	background: linear-gradient(to top, #1A4780, #4169E1);
 	position: relative;
 	box-shadow: 0 0 5px #000;
-	z-index: 10;   
+	z-index: 10;
 }
 .f-logo-l img {
 	position: absolute;
@@ -1318,24 +1318,57 @@ body {
 	font-size: 18px;
 	letter-spacing: 1px;
 }
-.public-link {
-    margin-bottom: 10px
-    text-decoration: none;
+.p-public {
+    text-indent: 30px;
+    text-align: left;
 }
-.foot-public {
-    margin-bottom: 30%;
+.h1-public {
+    font-size:20px;
+    margin:15px;
+    text-align: center;
 }
-.social {
-   max-width: 30px;
-   display: inline-block;
-    transform: scale(0.15);
-    margin-top: -40%;
-    
+.h2-public {
+    font-size:18px;
+    margin:15px;
+    text-align: center;
+}
+.image-public {
+    display: block;
+    margin: auto;
+}
+.a-public {
+    font-size: 15px;
+}
+
+.image-our-works {  
+  max-width: 300px;
+  max-height: 300px; 
+  white-space:normal;
    
+} 
+.li-our-works {    
+  margin-right: 15px;
+  margin: 15px 0 15px 15px;
+  display:block;
+  position: relative;
+   
+      
 }
-.share {
-      width: 170px;    
-    margin-top: 30%;
-    
-    
+.footer-public {    
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.filling-page-public {    ;
+    margin: 0; 
+    padding-top: 15px;
+    padding-bottom: 30%;
+}
+.background-public {
+   background-color:#E9F4C8; 
+}
+.article-position {    
+   padding-top: 20px; 
+   padding-bottom: 25px;   
 }
