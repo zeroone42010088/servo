@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /js/
 Allow: /pages/
 Allow: /img/
-Sitemap: sitemap.xml
+Sitemap: http://www.remontservo.ru/sitemap.xml
