@@ -1,0 +1,119 @@
+# Редирект с http на https создан автоматически при заказе бесплатного ssl-сертификата
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^remontservo.ru
+RewriteRule (.*) http://www.remontservo.ru/$1 [R=301,L]
+ErrorDocument 404 /404.html
+# Конец редиректа
+
+RewriteEngine On #Включаю работу механизма преобразования
+RewriteCond %{SERVER_PORT} ^80$ [OR]
+RewriteCond %{HTTP} =on
+RewriteRule ^(.*)$ https: //www.remontservo.ru/$1 [R=301,L]
+
+RewriteEngine On #Включить работу механизма преобразования:
+RewriteCond %{HTTP_HOST} !^www\. [NC] #Если доменное имя без www:
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L] #Тогда заменить его на домен с www:
+RewriteCond %{HTTP:X_FORWARDED_PROTO} !https [NC] #Если HTTPS отсутствует:
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L] #Тогда заменить домен без HTTPS доменом с HTTPS:
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+RewriteEngine On #вариант .stackoverflow
+RewriteCond %{HTTP_HOST} ^remontservo\.ru$ [NC]
+RewriteRule ^(.*)$ https://www.remontservo.ru/$1 [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Вариант 1 #http://www.redirect-checker.org/
+
+PHP
+
+RewriteCond %{HTTPS} =off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+1
+2
+RewriteCond %{HTTPS} =off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+Вариант 2
+
+PHP
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+1
+2
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+Вариант 3
+
+PHP
+
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+1
+2
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+Вариант 4
+
+PHP
+
+RewriteCond %{HTTP:X-HTTPS} !1
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+1
+2
+RewriteCond %{HTTP:X-HTTPS} !1
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+Вариант 5
+
+PHP
+
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ https://www.site.ru/$1 [L] 
+1
+2
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ https://www.site.ru/$1 [L] 
+Вариант 6
+
+PHP
+
+RewriteCond %{HTTP:X-Forwarded-Protocol} !=https
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+1
+2
+RewriteCond %{HTTP:X-Forwarded-Protocol} !=https
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+Вариант 7
+
+PHP
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+1
+2
+3
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+Вариант 8
+
+PHP
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+1
+2
+3
+4
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+После вставки одного из этих вариантов в файл .htaccess, сохраняете изменения
