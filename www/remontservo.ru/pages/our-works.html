@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ru" style="height:100%;">
+<html lang="ru" style="height:100%;;">
 
 <head>
     <meta charset="utf-8" />
@@ -11,9 +11,9 @@
 
 </head>
 
-<body>
+<body style="min-height:100%;">
 
-    <div class="container" style="position:relative; height:100%;">
+    <div class="container" style="min-height:100%; position:relative; margin-bottom: 0; padding-bottom: 0;">
 
         <header class="header">
             <div class="h-logo"><a href="index.html"><img src="../img/logo1.png" alt="KERNEL"></a></div>
@@ -46,9 +46,9 @@
 
         <main>
 
-            <div class="filling-page" style="height:100%; padding-top:10px;">
+            <div class="filling-page-public-our" style="min-height:100%; padding-top:10px; bottom:0; width:100%">
                 <!-- SLIDER -->
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="max-width: 600px; margin: -20px auto 20px;">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="max-width: 600px; margin: -20px auto 5px;">
                     <!-- Indicators 
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -328,19 +328,16 @@
         </main>
         <!-- .content -->
 
-        <footer class="foot" style="position:relative;  width:100%; bottom:-100;">
-            <div class="f-logo-l"><img src="../img/logo3.png" alt="kerneltlt"></div>
-            <div class="f-title">ООО "КЕРНЕЛ" Ремонт промышленной электроники</div>
-            <div class="f-logo-r"><img src="../img/logo3.png" alt="kerneltlt"></div>
-        </footer>
-        <!-- .footer -->
-        <script src="../js/jquery-3.2.1.js"></script>
-        <script src="../js/bootstrap.js"></script>
-
-
     </div>
     <!-- .wrapper -->
-
+    <footer class="foot" style="width:100%; bottom:0; position: relative;">
+        <div class="f-logo-l"><img src="../img/logo3.png" alt="kerneltlt"></div>
+        <div class="f-title">ООО "КЕРНЕЛ" Ремонт промышленной электроники</div>
+        <div class="f-logo-r"><img src="../img/logo3.png" alt="kerneltlt"></div>
+    </footer>
+    <!-- .footer -->
+    <script src="../js/jquery-3.2.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </body>
 
 </html>

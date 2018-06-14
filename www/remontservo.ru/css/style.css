@@ -1363,17 +1363,6 @@ body {
 .filling-page-public-our {    ;
     margin: 0;       
 }
-.foot-our {
-	display: block;
-	margin: 0 auto 0;
-	min-width: 1000px;
-	max-width: 1366px;
-	height: 100px;
-	background-color: #4169E1;
-	background: linear-gradient(to top, #1A4780, #4169E1);	
-	box-shadow: 0 0 5px #000;
-	z-index: 10;
-    bottom: 0;
-}
+
 
 
