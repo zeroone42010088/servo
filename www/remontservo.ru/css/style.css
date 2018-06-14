@@ -1360,4 +1360,11 @@ body {
     font-family:sans-serif; 
     font-size:16px;
 }
-
+our-works-flex {
+    display: flex;
+    flex-grow: 1;
+}
+.foot-our {
+    display: flex;
+    flex-grow: 0;
+}
