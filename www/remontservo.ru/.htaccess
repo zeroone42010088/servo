@@ -4,4 +4,5 @@ RewriteCond %{HTTP_HOST} ^remontservo.ru
 RewriteRule (.*) http://www.remontservo.ru/$1 [R=301,L]
 ErrorDocument 404 /404.html
 # Конец редиректа
-
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTPS/ RewriteRule ^index\.html$ https://www.remontservo.ru/ [R=301,L]
+# Редирект с index.html на главную страницу
