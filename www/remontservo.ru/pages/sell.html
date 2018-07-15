@@ -9,24 +9,8 @@
     <meta name="description" content="Список статей. Тематика сайта - ремонт серводвигателей и промышленного оборудования" />
     <link href="../css/style.css" rel="stylesheet">
 
-    <script>
-        function openImageWindow(src) {
-            var image = new Image();
-            image.src = src;
-            var width = image.width;
-            var height = image.height;
-
-
-            /* left = (screen.width - width) / 2 и top = (screen.height - height) / 2 
-            window.open(src,"Image","width=" + width + ",height=" + height);  */
-
-            window.open(src, "Image", " width=width  height=height, left=100% top=20em");
-            var left = (screen.width / 2) - (w / 2);
-            var top = (screen.height / 2) - (h / 2);
-
-        }
-
-    </script>
+    <SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+	<script type="text/javascript" src="../js/popup_img.js"></script>
 
 </head>
 
@@ -74,7 +58,7 @@
                     <div style="display:flex; flex-wrap:wrap;  flex-direction: row; align-items: flex-start; justify-content: center;" class="sell-motors">
 
                         <div>
-                            <img src="../img/sell/plata-touch.jpg" style="max-width: 300px; margin: 5px 15px 5px;" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/plata-touch.jpg" class="image-sell">
                             <p style="text-align:center;">Сенсорная панель оператора TOUCH </p>
                             <p style="text-align:center;">после ремонта</p>
                             <p style="text-align:center;">5100р</p>
@@ -83,7 +67,7 @@
 
 
                         <div>
-                            <img src="../img/sell/touch-sign.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/touch-sign.jpg" class="image-sell">
                             <p style="text-align:center;">Заводская табличка от панели TOUCH</p>
                             
                            
@@ -91,7 +75,7 @@
                         <!-- sell#2 -->
 
                         <div>
-                            <img src="../img/sell/sensor_siemens.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/sensor_siemens.jpg" class="image-sell">
                             <p style="text-align:center;">Сенсорный модуль SIEMENS</p>
                             <p style="text-align:center;">после ремонта</p>
                             <p style="text-align:center;">2100р</p>
@@ -99,15 +83,15 @@
                         <!-- sell#3 -->
 
                         <div>
-                            <img src="../img/sell/sensor-siemens-sign.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
-                            <p style="text-align:center;">Заводская табличка сенсорного модуля SIEMENS </p>
-                            <p style="text-align:center;">сейчас на ремонте</p>
+                            <img src="../img/sell/sensor-siemens-sign.jpg" class="image-sell">
+                            <p style="text-align:center;">Заводская табличка сенсорного модуля</p>
+                            <p style="text-align:center;">SIEMENS. Cейчас на ремонте</p>
                             <p style="text-align:center;">3100р</p>
                         </div>
                         <!-- sell#4 -->
 
                         <div>
-                            <img src="../img/sell/siemens-simatic.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/siemens-simatic.jpg" class="image-sell">
                             <p style="text-align:center;">SIEMENS-simatic </p>
                             <p style="text-align:center;">сейчас на ремонте</p>
                             <p style="text-align:center;">3100р</p>
@@ -115,14 +99,14 @@
                         <!-- sell#5 -->
 
                         <div>
-                            <img src="../img/sell/siemens-simatic-sign.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/siemens-simatic-sign.jpg" class="image-sell">
                             <p style="text-align:center;">Заводская табличка SIEMENS-simatic</p>
                             
                         </div>
                         <!-- sell#6 -->
 
                         <div>
-                            <img src="../img/sell/plata-emc.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/plata-emc.jpg" class="image-sell">
                             <p style="text-align:center;">Плата EMC
                             </p>
                             <p style="text-align:center;">на ремонте</p>
@@ -131,7 +115,7 @@
                         <!-- sell#7 -->
 
                         <div>
-                            <img src="../img/sell/siemens-sitop-power.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/siemens-sitop-power.jpg" class="image-sell">
                             <p style="text-align:center;">SIEMENS-sitop-power </p>
                             <p style="text-align:center;">сейчас на ремонте</p>
                             <p style="text-align:center;">3100р</p>
@@ -139,13 +123,13 @@
                         <!-- sell#8 -->
 
                         <div>
-                            <img src="../img/sell/siemens-sitop-sign.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/siemens-sitop-sign.jpg" class="image-sell">
                             <p style="text-align:center;">Заводская табличка от SIEMENS-sitop-power </p>                            
                         </div>
                         <!-- sell#9 -->
 
                         <div>
-                            <img src="../img/sell/siemens_6es7.jpg" class="img-sell-max" onclick='openImageWindow(this.src);'>
+                            <img src="../img/sell/siemens_6es7.jpg" class="image-sell">
                             <p style="text-align:center;">SIEMENS 6ES7</p>
                             <p style="text-align:center;">после ремонта</p>
                             <p style="text-align:center; margin-bottom: 10px">5100р</p>
