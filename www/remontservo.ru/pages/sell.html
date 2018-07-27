@@ -193,7 +193,7 @@
                         <div>
                             <img src="../img/preload.gif" realsrc="../img/sell/encoder-sick.jpg" class="img-sell" alt="Энкодер Sick">
                             <p class="p-sell">№13 Энкодер Sick</p>
-                            <p class="p-sell">SRM50-HFA0-K21</p>                    
+                            <p class="p-sell">SRM50-HFA0-K21</p>
                             <p class="p-sell">Цена договорная</p>
                             <p class="p-sell-bottom">Новый, в наличии</p>
                         </div>
@@ -1522,7 +1522,7 @@
                         </div>
 
                         <div class="illustrations">
-                            <img src="../img/preload.gif" realsrc="../img/sell/siemens91.jpg" class="img-sell" alt="SIEMENS SIMODRIVE 1P 6SN1123-1AA00-0EA1">                           
+                            <img src="../img/preload.gif" realsrc="../img/sell/siemens91.jpg" class="img-sell" alt="SIEMENS SIMODRIVE 1P 6SN1123-1AA00-0EA1">
                             <p class="p-sell">№91 SIEMENS SIMODRIVE</p>
                             <p class="p-sell">1P 6SN1123-1AA00-0EA1</p>
                             <p class="p-sell">Цена договорная</p>
@@ -1758,26 +1758,6 @@
             return topVisible || bottomVisible;
         }
 
-        /**
-        Вариант проверки, считающий элемент видимым,
-        если он не более чем -1 страница назад или +1 страница вперед
-
-        function isVisible(elem) {
-
-          var coords = elem.getBoundingClientRect();
-
-          var windowHeight = document.documentElement.clientHeight;
-
-          var extendedTop = -windowHeight;
-          var extendedBottom = 2 * windowHeight;
-
-          // top visible || bottom visible
-          var topVisible = coords.top > extendedTop && coords.top < extendedBottom;
-          var bottomVisible = coords.bottom < extendedBottom && coords.bottom > extendedTop;
-
-          return topVisible || bottomVisible;
-        }
-        */
 
         function showVisible() {
             var imgs = document.getElementsByTagName('img');
@@ -1799,7 +1779,8 @@
         window.onscroll = showVisible;
         showVisible();
 
-    </script> <!-- загрузка изображений -->
+    </script>
+    <!-- загрузка изображений -->
 
 </body>
 
