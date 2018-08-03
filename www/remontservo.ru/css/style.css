@@ -1178,7 +1178,7 @@ body {
 }
 
 .h-contacts p a {
-    color: #FF7E00;
+    color: #FF7E00; 
     font-size: 0.8em;
     letter-spacing: 1px;
 }
@@ -1700,9 +1700,9 @@ body {
     margin: auto;
 }
 
-.a-public {
-    font-size: 15px;
-}
+/*.a-public {
+    font-size: 0.95em;
+} */
 
 .filling-page-public {
     ;
@@ -1729,24 +1729,6 @@ body {
     ;
     margin: 0;
 }
-
-/*.sell-motors {
-  position: relative;
-}
-.img-sell-max:active {
-  position: absolute;   
-    -webkit-transform: translate(-50%, -50%) scale(3);
-  -ms-transform: translate(-50%, -50%) scale(3);
-   -o-transform: translate(-50%, -50%) scale(3); 
-  transform: translate(-50%, -50%) scale(3);
-    transform-origin: center;
-    
-} 
-.openImageWindow(this.src) {
-left: 50%;
-    transform: translateX(-50%);
-
-}*/
 
 .p-sell {
     text-align:center;    
@@ -1800,4 +1782,6 @@ left: 50%;
 .popup_img {
   pointer-events: none;    
 }
+
+
 
