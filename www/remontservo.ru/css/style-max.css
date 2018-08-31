@@ -1192,14 +1192,15 @@ body {
 
 .nav {
     position: relative;
-    height: 45px;
+    height: 85px;
     width: 100%;
     background: lightgray;
     background: linear-gradient(to top, lightgray, white);
     box-shadow: 0 0 5px #000;
     z-index: 50;
 }
-
+@media screen and (min-device-width: 1300px) {
+    .nav height: 45px;}
 .n-menu {
     height: 100%;
     width: 100%;
@@ -1782,6 +1783,3 @@ body {
 .popup_img {
   pointer-events: none;    
 }
-
-
-
