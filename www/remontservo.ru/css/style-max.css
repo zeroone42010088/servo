@@ -1199,7 +1199,7 @@ body {
     box-shadow: 0 0 5px #000;
     z-index: 50;
 }
-@media screen and (min-device-width: 1300px) {
+@media screen and (device-width: 1300px) {
     .nav height: 45px;}
 .n-menu {
     height: 100%;
